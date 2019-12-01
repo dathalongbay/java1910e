@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Các kiểu dữ liệu trong js ( 7 kiểu )
+        Cách kiểm tra kiểu dữ liệu trong js
+
+        => Kiểu số
+        var i = 5;
+        => Kiểu chuỗi : chú ý giá trị sẽ nằm '' hay ""
+        var f = "5";
+        var c = "chào việt nam";
+        => Kiểu Booleans : chỉ chứa 2 giá trị true và false
+        var g = true;
+        var l = false;
+        => Kiểu mảng là kiểu dữ liệu chứa được nhiều giá trị 1 lúc
+        bắt đầu [ và kết thúc ] bên trong sẽ là các phân tử phân tách bởi dấu ,
+        var students = ["nguyễn văn an", "nguyễn thùy linh", "phan anh quân"];
+        var exam = [7,9,11,15];
+        => Kiểu undefined ( khi 1 biến được tạo ra nhưng không được gán giá trị
+        thì kiểu của nó sẽ là undefined )
+        var t;
+        => Kiểu null ( không có gì )
+        var m = null;
+        => Kiểu đối tượng trong js
+        bắt đầu { và kết thúc }
+        bên trong sẽ là các cặp key và value
+        key thì không cần để trong '' hay ""
+        key và value sẽ phân tách bởi dấu :
+        các cặp key:value sẽ được phân tách bởi dấu , khi có nhiều
+        var student = {ten:"nguyên văn an", tuoi:18, quequan: "hà nội"};
+
+        => muốn kiểm tra kiểu của 1 biến thì sẽ sử dụng lệnh typeof
+        ví dụ : var d1= 9;
+        console.log(typeof d1);
+
+        => chú ý là
+        kiểu null, mảng, đối tượng khi sử dụng typeof để kiểm tra
+        đều trả về object => không phân biệt được 3 kiểu dữ liệu này
+        thông qua lệnh typeof
+    </pre>
+
+    <script type="text/javascript">
+        // Số
+        var a = 5;
+        console.log("typeof a=5 : " + typeof a);
+        var b = "chào việt nam";
+        console.log("typeof b chào việt nam : " + typeof b);
+        var c1 = true;
+        console.log("typeof c1=true : " + typeof c1);
+        var c2 = false;
+        console.log("typeof c2=false : " + typeof c2);
+
+        var d;
+        console.log("typeof d không gán giá trị : " + typeof d);
+
+        var f = null;
+        console.log("typeof f=null : " + typeof f);
+
+        var g = ["nguyễn văn an", "nguyễn thùy linh", "phan anh quân"];
+        console.log("typeof mảng g : " + typeof g);
+
+        var student = {ten:"nguyên văn an", tuoi:18, quequan: "hà nội"};
+        console.log("typeof đối tượng student : " + typeof student);
+    </script>
+</body>
+</html>
