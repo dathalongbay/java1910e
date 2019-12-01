@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        document.getElementById("").innerHTML
+
+        chú ý :
+        innerText chỉ thay đổi được văn bản không nhúng được html vào
+        innerHTML vừa thay đôi được văn bản và thay đổi được cả HTML
+
+
+    </pre>
+
+    <div id="target1"></div>
+    <div id="target2"></div>
+
+    <script type="text/javascript">
+        document.getElementById("target1").innerHTML = "<p>Nhúng thẻ p vào trong thẻ div #target1</p>";
+        // nháy kép bên trong phải thêm dấu xược ngược vào trước nháy kép bên trong
+        document.getElementById("target2").innerHTML = " <a href=\"http://zing.vn\">Zing.vn</a>";
+
+    </script>
+</body>
+</html>
