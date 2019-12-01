@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Lệnh document.getElementById()
+        chọn 1 thẻ html dựa vào thuộc tính id của thẻ html đó
+
+        - thay đổi nội dung văn bản của 1 thẻ dựa trên thuộc tính id của thẻ html
+        thì mình sẽ sử dụng thuộc tính innerText
+        document.getElementById().innerText
+    </pre>
+
+    <div id="target1"></div>
+    <div id="target2"></div>
+
+    <script type="text/javascript">
+        document.getElementById("target1").innerText = "Nội dung của thẻ #target1";
+        document.getElementById("target2").innerText = "Nội dung của thẻ #target2";
+    </script>
+
+</body>
+</html>
