@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Đối tượng trong JS
+        Đối tượng ( object )
+        Lớp ( Class )
+        Thuộc tính ( Property , Properties ) chỉ ra đặc điểm tính chất
+        Phương thức ( Method ) chỉ ra hành động
+        Ví dụ trong cuộc sống thức
+        Đối tượng là xe ô tô vinfast là đối tượng cụ thể của class Oto
+        Trong class Oto thì sẽ các thuộc tính chỉ ra tính chất của cái class đó
+        - thuộc tính tên ô tô
+        - thuộc tính model ô tố ( vinfast lux )
+        - thuộc tính khối lượng ô tô
+        - thuộc tính tốc độ ô tô
+        - thuộc tính màu ...
+        Phương thức ô tô :
+        - phương thức khởi động ô tô
+        - phương thức lái xe
+        - phương thức phanh
+        - phương thức tắt máy ...
+
+        trong JS để khai báo 1 đối tượng thì mình sẽ sử dụng {}
+        var car = {
+            // khai báo thuộc tính
+            name:"Vin fast",
+            model:"Lux",
+            color: "đỏ",
+            speed: "100 km",
+            weight: "1 tấn",
+            // khai báo phương thức
+            start: function() {
+                console.log("Xe bắt đầu chạy");
+            },
+            drive: function(){
+                // trong phương thức khi muốn truy cập vào thuộc tính
+                // thì ra sử dụng từ khóa this.tên thuộ tính
+                console.log("Xe chạy với tốc độ " + this.speed);
+            },
+            brake: function() {
+                console.log("Xe phanh");
+            },
+            stop : function() {
+                console.log("Xe dừng");
+            }
+        };
+
+    </pre>
+
+    <script type="text/javascript">
+        var car = {
+            // khai báo thuộc tính
+            name:"Vin fast",
+            model:"Lux",
+            color: "đỏ",
+            speed: "100 km",
+            weight: "1 tấn",
+            // khai báo phương thức
+            start: function() {
+                console.log("Xe bắt đầu chạy");
+            },
+            drive: function(){
+                // trong phương thức khi muốn truy cập vào thuộc tính
+                // thì ra sử dụng từ khóa this.tên thuộ tính
+                console.log("Xe chạy với tốc độ " + this.speed);
+            },
+            brake: function() {
+                console.log("Xe phanh");
+            },
+            stop : function() {
+                console.log("Xe dừng");
+            }
+        };
+
+        // gọi đến đối tượng car và truy cập vào thuộc tính
+        console.log(car.name);
+        console.log(car.model);
+        console.log(car.color);
+
+        // truy cập phương thức của car
+        console.log(car.start());
+        console.log(car.drive());
+        console.log(car.brake());
+        console.log(car.stop());
+
+
+    </script>
+
+</body>
+</html>
