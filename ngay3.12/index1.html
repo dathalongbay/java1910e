@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Khái niệm vòng lặp trong js
+        Tiếng anh vòng lặp viết loop
+        Có 3 dạng vòng lặp phổ biến trong js
+        - vòng lặp for
+        - vòng lặp while
+        - vòng lặp do while
+        Khái niệm :
+        Vòng lặp thực hiện lặp đi lặp lại 1 khối gồm nhiều dòng code
+        theo 1 chu kỳ gồm nhiều lần
+        Mỗi lần chạy thì sẽ có 1 biến đếm được thay đổi
+        Vòng lặp sẽ có điều kiện chạy khi điều kiện chạy đúng thì vòng lặp sẽ chạy
+        Biến đếm sẽ được khai báo trước khi vòng lặp bắt đầu
+        Chú ý : cẩn thận với vòng lặp vô hạn ( điều kiện chạy luôn luôn đúng không
+        có điểm dừng là 1 dạng lỗi sẽ làm treo trình duyệt thậm chí là treo máy )
+        Tóm tắt lại có 3 thứ phải chú ý trong 1 vòng lặp
+        1 - sự khởi đầu của biến đếm
+        2 - điều kiện chạy của vòng lặp
+        3 - sự thay đổi của biến đếm sau mỗi lần chạy
+        ví dụ vòng lặp trong cuộc sống
+        đấy là vòng lặp đi học phổ thông bắt đầu từ lớp 1 đến lớp 12
+        điều kiện đó là lớp phải nhỏ hoặc bằng 12
+        mỗi lần chạy thì số lớp tăng thêm 1
+        sự khởi đầu của còng lặp bắt đầu từ 1
+    </pre>
+
+    <h1>Cú pháp của vòng lặp for</h1>
+
+    <pre>
+        for (sự khởi đầu của biến đếm;điều kiện chạy của vòng lặp; sự thay đổi của biến đếm) {
+            // khối code js sẽ được được chạy trong lần lặp
+            // khối code có thể 1 hoặc nhiều dòng
+        }
+
+        ví dụ 1 về việc đi học từ lớp 1 đến lớp 12
+        for (var n = 1;n <= 12;n++) {
+            console.log("tôi đi học lớp : " + n);
+        }
+        ví dụ số 2 : in ra các số chẵn từ 1 đến 100
+        for (var i = 2; i <= 100; i = i + 2) {
+            console.log("số chẵn : " + i);
+        }
+        cách số 2 khi làm bài in ra số chẵn
+        for (var i = 2; i <= 100; i++) {
+            if (i % 2 == 0) {
+                console.log("số chẵn : " + i);
+            }            
+        }
+    </pre>
+
+    <script type="text/javascript">
+        for (var n = 1;n <= 12;n++) {
+            console.log("tôi đi học lớp : " + n);
+        }
+        for (var i = 2; i <= 100; i = i + 2) {
+            console.log("số chẵn : " + i);
+        }
+    </script>
+
+</body>
+</html>
