@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Hàm ( function ) trong JS
+        Định nghĩa hàm : Hàm ( functions ) là 1 tập hợp các câu lệnh
+        để thực hiện 1 chức năng mà có thể gọi lại khi cần
+        thay vì phải viết lại toàn bộ những dòng code đó
+        Ví dụ :
+        - Hàm tính diện tích hình tròn
+        - Hàm tính chu vi hình tròn
+        - Hàm tính điểm trung bình cho học sinh
+        - Hàm đổi số tiền từ USD ra VND
+
+        Khi nói về hàm :
+        phần 1 : khai báo hàm
+        phần 2 : gọi hàm
+
+        Khái niệm về tham số trong hàm
+        Tham số là biến được truyền vào trong hàm để thực hiện việc tính toán
+
+        Cú pháp khai báo hàm :
+        function tên hàm(tham số 1, tham số 2, tham số 3 ...) {
+            // các câu lệnh bên trong hàm
+        }
+        Cú pháp gọi hàm :
+        tên hàm (truyền tham số 1 , truyền vào tham số 2 , truyền vào tham số 3 ...);
+
+        Ví dụ về hàm đơn giản in ra các số từ 1 đến n
+
+        function demo(n){
+            for (var i = 1; i <= n;i++) {
+                console.log("số thứ : " + i);
+            }
+        }
+
+        //  gọi hàm thứ 1
+        demo(10);
+
+        // gọi hàm thứ 2
+        var c = 100;
+        demo(c);
+
+        Chú ý : tên biến truyền vào khi gọi hàm không cần thiết phải giống tên tham số
+
+
+    </pre>
+
+    <script type="text/javascript">
+        function demo(n){
+            for (var i = 1; i <= n;i++) {
+                console.log("số thứ : " + i);
+            }
+        }
+
+        //  gọi hàm thứ 1
+        demo(10);
+
+        console.log("-------------");
+
+        // gọi hàm thứ 2
+        var c = 100;
+        demo(c);
+    </script>
+
+</body>
+</html>
