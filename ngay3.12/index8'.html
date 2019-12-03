@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Lệnh return bên trong function
+        Lệnh return được sử dụng để trả về giá trị khi mà muốn kết thức function
+        Chú ý : tất cả các câu lệnh viết sau return bên trong function sẽ không được chạy
+
+        Xây dựng 1 function để quy đổi tiền USD ra VND
+        cần 2 tham số :
+        tham số 1 số tiền cần đổi
+        tham số 2 tỷ giá
+
+        function quydoiUSDthanhVND(sotien, tygia) {
+            var vnd = sotien*tygia;
+            return vnd;
+        }
+
+        // gọi hàm truyền trực tiếp giá trị vào
+        quydoiUSDthanhVND(100, 23000);
+
+        // gọi hàm thông qua cách truyền biến
+        var usd = 1200;
+        var tg = 23500;
+        quydoiUSDthanhVND(usd, tg);
+
+        Chú ý khi gọi hàm các biến hay giá trị truyền cho tham số sẽ phụ thuộc vào
+        vị trí khai báo của tham số chứ không theo tên
+        => suy ra truyền biến vào function theo đúng thứ tự
+    </pre>
+
+    <script type="text/javascript">
+        function quydoiUSDthanhVND(sotien, tygia) {
+            var vnd = sotien*tygia;
+            return vnd;
+        }
+
+        // gọi hàm truyền trực tiếp giá trị vào
+        var ketqua1 = quydoiUSDthanhVND(100, 23000);
+        console.log("đổi 100 USD với ty giá 23000 : " + ketqua1);
+
+        // gọi hàm thông qua cách truyền biến
+        var usd = 1200;
+        var tg = 23500;
+        var ketqua2 = quydoiUSDthanhVND(usd, tg);
+        console.log("đổi 1200 USD với ty giá 23500 : " + ketqua2);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Gán giá trị mặc định cho tham số
+        Nếu 1 function khi khai báo cần các tham số truyền vào
+        nếu khi gọi function mà không truyền biến cho các tham số này
+        thì sẽ bị lỗi
+
+        => gán giá trị mặc định cho các tham số
+        nếu 1 tham số có giá trị mặc định nếu khi gọi hàm mà không truyền biến vào
+        thì nó sẽ lấy giá trị mặc định
+        nếu truyền giá trị vào thì tham số sẽ lấy giá trij truyền vào
+    </pre>
+
+    <script type="text/javascript">
+        function quydoiUSDthanhVND(sotien, tygia = 21000) {
+            var vnd = sotien*tygia;
+            return vnd;
+        }
+
+        // gọi hàm truyền biến vào
+        var tg1 = 23000;
+        var ketqua1 = quydoiUSDthanhVND(100, tg1);
+        console.log("đổi 100 USD với ty giá 23000 : " + ketqua1);
+
+        // không truyền tham số 2
+        var ketqua2 = quydoiUSDthanhVND(100);
+        console.log("đổi 100 USD với ty giá mặc định : " + ketqua2);
+    </script>
+
+</body>
+</html>
