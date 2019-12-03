@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div>
+        <form name="usdtovnd" method="post" action="">
+            <p>
+                <label>Số tiền</label>
+                <input name="usd" id="usd" type="text" value="">
+            </p>
+
+            <p>
+                <label>Tỷ giá</label>
+                <input name="tygia" id="tygia" type="text" value="">
+            </p>
+        </form>
+    </div>
+
+    <div>
+        <button onclick="batdauchuyendoi()">Quy đổi ngoại tệ</button>
+        <p id="ketqua" style="color: red">?</p>
+    </div>
+
+    <script type="text/javascript">
+        function quydoiUSDthanhVND(sotien, tygia) {
+            var vnd = sotien*tygia;
+            return vnd;
+        }
+
+        function batdauchuyendoi() {
+            var usd = document.getElementById("usd").value;
+            var tygia = document.getElementById("tygia").value;
+            // ép kiểu về số nguyên
+            usd = parseInt(usd);
+            tygia = parseInt(tygia);
+
+            var kq = quydoiUSDthanhVND(usd, tygia);
+            document.getElementById("ketqua").innerText = kq + " VND";
+        }
+    </script>
+
+</body>
+</html>
