@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Lệnh continue; trong vòng lặp
+        Lệnh continue; có tác dụng bỏ qua những câu lệnh phía sau nó trong vòng lặp
+        và chuyển tiếp đến lần lặp tiếp theo
+    </pre>
+
+    <script type="text/javascript">
+        for (var n = 1;n <=10;n++) {
+
+            if (n === 5) {
+                console.log("lệnh continue sẽ dừng các câu lệnh phía sau và chuyển sang " +
+                    "lần lặp tiếp theo");
+                continue;
+            }
+
+            console.log("số thứ " + n);
+        }
+    </script>
+</body>
+</html>
