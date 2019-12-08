@@ -13,6 +13,10 @@
         và trả về kết quả -1 nếu không tìm thấy chuỗi con
         - lastIndexOf() trả về vị trí xuất hiện lần cuối cùng của chuỗi con trong
         chuỗi mẹ và trả về -1 nếu không tim thấy
+        - search() tìm chuỗi con trong chuỗi mẹ và trả về vị trí xuất hiện của chuỗi con
+        - slice(start, end) cắt chuỗi
+        - substring(start, end) cắt chuỗi
+        - substr(start, length) cắt chuỗi ( tham số thứ 2 là độ dài của chuỗi )
 
 
     </pre>
@@ -32,6 +36,30 @@
         console.log(demo1.lastIndexOf("JS"));
         console.log("test indexOf()");
         console.log(demo1.indexOf("JS"));
+
+        console.log("test search()");
+        console.log(demo1.search("JS"));
+
+        console.log("test slice()");
+        console.log(demo1.slice(7,50));
+
+        console.log("test slice() không truyền vào end");
+        console.log(demo1.slice(7));
+
+        console.log("test substring()");
+        console.log(demo1.substring(7,50));
+
+        console.log("test substring() không truyền vào end");
+        console.log(demo1.substring(7));
+
+        console.log("test substr(start, độ dài)");
+        console.log(demo1.substr(5,10));
+
+        var demo2 = "Chào java";
+        var demo3 = demo2.replace("java", "php");
+        console.log("test replace()");
+        console.log(demo3);
+
 
     </script>
 
