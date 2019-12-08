@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <pre>
+        Muốn đếm độ dài của 1 chuỗi trong js : sử dụng thuộc tính .length
+        Tìm sự xuất hiện của chuỗi con trong chuỗi mẹ : indexOf()
+        indexOf() trả về vị trí đầu tiên xuất hiện của chuỗi con trong chuỗi mẹ
+        và trả về kết quả -1 nếu không tìm thấy chuỗi con
+        - lastIndexOf() trả về vị trí xuất hiện lần cuối cùng của chuỗi con trong
+        chuỗi mẹ và trả về -1 nếu không tim thấy
+
+
+    </pre>
+
+    <script type="text/javascript">
+        var hello = " Hello \"Viet Nam\" ";
+        // đếm số ký tự
+        console.log(hello.length);
+        // indexOf trả về vị trí của chuỗi con trong chuỗi mẹ
+        // tìm vị trí chuỗi Viet trong chuỗi Hello Viet Nam
+        console.log(hello.indexOf("Viet"));
+
+        console.log(hello.indexOf("Han quoc"));
+
+        var demo1 = "JS là 1 ngôn ngữ lập trình FE nhưng JS có thể ứng dụng vào rất nhiều công việc";
+        console.log("test lastIndexOf()");
+        console.log(demo1.lastIndexOf("JS"));
+        console.log("test indexOf()");
+        console.log(demo1.indexOf("JS"));
+
+    </script>
+
+</body>
+</html>
