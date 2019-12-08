@@ -32,6 +32,27 @@
         demo1.pop();
         console.log(demo1);
 
+        //  .shift() gỡ bỏ phần tử đầu tiên trong mảng
+        console.log("test shift");
+        demo1.shift();
+        console.log(demo1);
+
+        // unshift() thêm 1 phần tử vào vị trí bắt đẩu của mảng
+        console.log("test unshift");
+        demo1.unshift("sass");
+        console.log(demo1);
+
+        // delete xóa bỏ phần tử trong mảng theo key của phần tử
+        console.log("test delete");
+        delete demo1[0];
+        console.log(demo1);
+
+        // splice() thêm phần tử vào mảng
+        // tham số 1 là vị trí bắt đầu thêm
+        // tham số 2 là số phần tử se bị xóa bỏ
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.splice(3, 0, "Lemon", "Kiwi");
+        console.log(fruits);
     </script>
 </body>
 </html>
