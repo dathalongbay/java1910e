@@ -62,7 +62,21 @@
         i++;
     }
 
+    // thêm phần tử vào mảng cách 1
+    demo1.push("Graph SQL");
 
+    // thêm phần tử vào mảng cách 2
+    demo1[6] = "T SQL";
+    console.log(demo1);
+
+
+    // Kiểm tra 1 biến có phải 1 mảng hay không
+    console.log(typeof demo1); // object
+
+    // cách 1
+    console.log(Array.isArray(demo1));
+    // cách 1
+    console.log(demo1 instanceof Array);
 
 
 
