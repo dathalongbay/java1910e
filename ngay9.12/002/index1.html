@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Kế thừa trong class javascript
+        ví dụ : ClassCon extends ClassCha
+        trong constructor của class Con mà muốn gọi đến construct của class Cha
+        thì sẽ sử dụng từ khóa super()
+        => Khi 1 class con kế thừa từ class cha
+        thì class con có thể gọi đến tất cả các thuộc tính cũng như các phương thức
+        của class cha
+        => thuộc tính class chỉ đặc điểm tính chất
+        ví dụ tên , tuổi , quê quán của sinh viên
+        => phương thức trong class chỉ ra 1 hành động cụ thể của class
+        ví dụ class sinhvien có các phương thức dihoc() , thi() , totnghiep()
+    </pre>
+
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+
+        class Maytinh {
+            constructor(ten, model, nhasanxuat, gia) {
+                this.tenmaytinh = ten;
+                this.modelmaytinh = model;
+                this.nhasxmaytinh = nhasanxuat;
+                this.giamaytinh = gia;
+            }
+
+            thongtincauhinh() {
+                return "ten may tinh : " + this.tenmaytinh + " model " + this.modelmaytinh
+                + " nha san xuat " + this.nhasxmaytinh + " gia tien " + this.giamaytinh;
+            }
+        }
+
+        class Laptop extends Maytinh {
+            constructor(ten, model, nhasanxuat, gia, wifi) {
+                // gọi đến constructor của class cha
+                super(ten, model, nhasanxuat, gia);
+                this.wifiLaptop = wifi;
+            }
+
+            thongtinlaptop() {
+                // gọi đến phương thức thongtincauhinh() của class cha Maytinh
+                return this.thongtincauhinh() + " wifi " + this.wifiLaptop;
+            }
+        }
+
+        var sonyVaio = new Laptop("vaio", "n2000", "sony", 10000000, "thế hệ wifi thứ 5");
+        document.getElementById("demo").innerHTML = sonyVaio.thongtinlaptop();
+    </script>
+
+</body>
+</html>
