@@ -18,7 +18,21 @@ class SinhVien {
         return info;
     }
 
+
+    /**
+     * static method ( phương thức tĩnh )
+     * có thể gọi đến phương thức tĩnh mà không cân khởi tạo đối tượng
+     */
+    static diemSinhVien() {
+        return "java 8 html 5 css 6";
+    }
+
 }
+
+// gọi trực tiếp đến phương thức tĩnh mà không cần khởi tạo đối tượng
+// cú pháp TenClass.TenPhuongThucTinh();
+document.getElementById("diem").innerHTML = SinhVien.diemSinhVien();
+
 
 // khởi tạo đổi tượng từ class
 var trung = new SinhVien("nguyễn đức trung", 21, "ninh bình");
