@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <pre>
+        file html chạy từ trên xuống dưới nên
+        phải viết code jquery sau khi đã load được thư viện jquery
+    </pre>
+    <div id="demo" style="background-color: green; width: 200px; height: 200px">
+
+    </div>
+
+    <button id="btn1">Click here</button>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        // code bên trong document ready
+
+        // sự kiện trong jquery
+        // găn sự kiện click chuột vào thẻ #btn1
+        // truyền vào click() 1 hàm không có tên function(){ code của hàm }
+        $("#btn1").click(function(){
+            // code của callback là hàm không có tên
+            $("#demo").css("background-color", "yellow");
+            $("#demo").css("width", "300px");
+            $("#demo").css("height", "300px");
+        });
+
+    });
+</script>
+</body>
+</html>
