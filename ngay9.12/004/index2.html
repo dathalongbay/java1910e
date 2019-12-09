@@ -24,14 +24,19 @@
         // sự kiện trong jquery
         // găn sự kiện click chuột vào thẻ #btn1
         // truyền vào click() 1 hàm không có tên function(){ code của hàm }
-        $("#btn1").click(function(){
+       /* $("#btn1").click(function(){
             // code của callback là hàm không có tên
             $("#demo").css("background-color", "yellow");
             $("#demo").css("width", "300px");
             $("#demo").css("height", "300px");
+        });*/
+
+        $("#btn1").dblclick(function(){
+            // code của callback là hàm không có tên
+            $("#demo").css("background-color", "red");
+            $("#demo").css("width", "100px");
+            $("#demo").css("height", "100px");
         });
-
-
 
     });
 </script>
