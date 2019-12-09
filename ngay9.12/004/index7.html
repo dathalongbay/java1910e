@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form name="abc" method="post" action="">
+    <p>
+        <label>USD</label>
+        <input type="text" name="usd" value="">
+    </p>
+
+    <p>
+        <label>Tỷ giá</label>
+        <input type="text" name="tygia" value="">
+    </p>
+</form>
+
+    <p>
+        <button id="btn1">Chuyển đổi</button>
+    </p>
+    <p id="vnd" style="color:red"></p>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $("#btn1").click(function(){
+           var usd = $("input[name='usd']").val();
+           var tygia = $("input[name='tygia']").val();
+
+           var vnd = usd*tygia;
+           $("#vnd").html(vnd);
+
+        });
+
+
+
+    });
+</script>
+</body>
+</html>
