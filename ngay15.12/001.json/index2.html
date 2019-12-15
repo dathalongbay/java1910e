@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        Chuyển đổi từ 1 chuỗi json thành đối tượng trong javascript
+    </pre>
+
+    <script type="text/javascript">
+        var sinhVienJson = '{"ten":"nguyễn thanh sơn","tuoi":22,"diem":18}';
+        // parse() : chuyển đổi json => object js
+        var sinhVien = JSON.parse(sinhVienJson);
+        console.log("in ra chuỗi json");
+        console.log(sinhVienJson);
+        console.log("in ra chuỗi object js");
+        console.log(sinhVien);
+
+    </script>
+</body>
+</html>
