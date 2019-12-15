@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <pre>
+        AJAX là 1 công nghệ cho phép thay đổi 1 phần trong trang web
+        mà không cần load lại toàn bộ trang
+        Việc sử dụng AJAX cho phép tăng tốc độ và trải nghiệm người dùng
+    </pre>
+    <div id="target">
+
+    </div>
+    <p>
+        <button id="control">Click here load ajax</button>
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            $("#control").click(function(){
+                // tạo 1 object js để gửi dữ liệu đi
+                var params = {};
+                // khai báo các thuộc tính cho object js
+                params.current = 30;
+                params.demo = "danh mục";
+                params.type = "products";
+
+                $.ajax({
+                    // đích gửi liệu đến
+                    // https://abc.com.vn/api/products
+                    url: "demo_test.txt",
+                    // khai báo dữ liệu gửi đi
+                    data: params,
+                    // khai báo kiểu dữ liệu gửi đi POST hay GET
+                    type: "POST",
+                    // khai báo kiểu dữ liệu trả về của url
+                    dataType: 'xml',
+                    // trước khi gửi đi nếu muôn làm gì ?
+                    beforeSend: function() {
+                        alert("tôi sắp gửi dữ liệu đi");
+                    },
+                    // nếu dữ liệu gửi đến đích thành công
+                    success: function(response) {
+
+                        console.log(response);
+                        console.log(typeof response);
+
+                        //$("#target").html(response);
+                    },
+                    // nếu dữ liệu gửi đi thất bại
+                    // ví dụ url đích đến không tồn tại hay thời điểm gửi đi
+                    // url gửi đi đang bị lỗi
+                    error: function() {
+                        alert("Ajax bị lỗi");
+                    },
+                    // sau khi hoàn thành việc chạy ajax
+                    complete: function() {
+                        alert("Ajax đã hoàn thành");
+                    }
+                });
+            });
+
+        });
+
+
+    </script>
+</body>
+</html>
