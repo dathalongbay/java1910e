@@ -1,1 +1,1 @@
-noi dung
+{"ten":"nguyễn thanh sơn","tuoi":22,"diem":18}

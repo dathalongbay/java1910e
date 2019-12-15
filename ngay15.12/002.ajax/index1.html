@@ -38,7 +38,7 @@
                     data: params,
                     // khai báo kiểu dữ liệu gửi đi POST hay GET
                     type: "POST",
-                    // khai báo kiểu dữ liệu trao đổi
+                    // khai báo kiểu dữ liệu trả về của url
                     dataType: 'json',
                     // trước khi gửi đi nếu muôn làm gì ?
                     beforeSend: function() {
@@ -46,7 +46,12 @@
                     },
                     // nếu dữ liệu gửi đến đích thành công
                     success: function(response) {
-                        $("#target").html(response);
+
+                        console.log(response);
+                        console.log(typeof response);
+
+                        var dataTrave = JSON.stringify(response);
+                        $("#target").html(dataTrave);
                     },
                     // nếu dữ liệu gửi đi thất bại
                     // ví dụ url đích đến không tồn tại hay thời điểm gửi đi
