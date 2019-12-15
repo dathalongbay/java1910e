@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<pre>
+    Json là định dạng dữ liệu tương đối giống với đối tượng trong js
+    và Json được sử dụng để trao đổi và lưu trữ dữ liệu
+    Link đọc thêm : https://www.w3schools.com/js/js_json_intro.asp
+    Chú ý : Json không phải là đối tượng trong javascript
+</pre>
+
+<script type="text/javascript">
+    // tạo ra 1 đối tượng object javascript
+    var sinhVien = {ten: "nguyễn thanh sơn", tuoi: 22, diem: 18};
+    // Chuyển đổi đối tượng object trong js thành 1 chuỗi json
+    // stringify() : chuyển đổi object js => json
+    var sinhVienJson = JSON.stringify(sinhVien);
+    console.log("in ra chuỗi json");
+    console.log(sinhVienJson);
+    console.log("in ra chuỗi object js");
+    console.log(sinhVien);
+
+</script>
+</body>
+</html>
