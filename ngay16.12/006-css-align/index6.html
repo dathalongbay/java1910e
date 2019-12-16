@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 360px;
+            height: 400px;
+            background-color: green;
+            margin: 0 auto;
+
+            position: relative;
+        }
+
+        .parent .child {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        Căn 1 thẻ bên trong 1 thẻ khác
+        dựa vào thuộc tính position
+        position: static;
+        position: relative;
+        position: absolute;
+        position: fixed;
+
+        ví dụ
+        căn phòng rộng 10 mét dài 10 mét
+        có 1 cái ghé rộng 0.1 mét và dài 0.1 met
+        giữa căn phòng
+
+        đặt cái ghế vị trí 5m * 5m giữa căn phòng
+        nhưng cái ghế vẫn ko giữa phòng vì cái ghế cũng có kích cỡ
+        đặt cái ghết tọa độ 5 mét * 5 mét - (0.1/2) = ?
+
+        =>
+        đăt thẻ mẹ có position: relative;
+        đăt thẻ con có position: absolute; top: 50%;
+            left: 50%; transform: translate(-50%,-50%);
+    </pre>
+
+    <div class="parent">
+        <div class="child">Thẻ div con</div>
+    </div>
+
+</body>
+</html>
