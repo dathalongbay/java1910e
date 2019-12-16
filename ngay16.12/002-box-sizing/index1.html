@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <style type="text/css">
+        /*Reset css luôn chạy trước tất cả các dòng css khắc */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+
+        #box1 {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
     <pre>
         thuộc tính css box-sizing
-
+        Trong trình duyệt luôn có css mặc định
+        và các trình duyệt lại có css mặc định khác nhau
+        nên khi style bằng css thuần
+        người ta thường có 1 đoạn reset css
     </pre>
+
+    <div id="box1">
+        BOX 1
+    </div>
 </body>
 </html>

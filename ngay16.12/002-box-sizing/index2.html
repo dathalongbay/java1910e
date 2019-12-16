@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            padding: 20px;
+            border: 5px solid red;
+            /* kích thước chính xác của box1 là ? */
+        }
+
+        #box2 {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            padding: 20px;
+            border: 5px solid red;
+            /* kích thước chính xác của box2 là ? */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box1">Box số 1</div>
+    <div id="box2">Box số 2</div>
+
+    <pre>
+        Chiều rộng thực tế = độ rộng content + padding trái + padding phải + border width trái
++ border width phải
+        Chiều cao thực tế = độ cao content + padding trên + padding dưới + border trên
+        + border dưới
+
+
+        Trong ví dụ này mình đặt width = 200px và height = 200px
+        nhưng khi thêm padding và border thì kích cỡ của thẻ vượt ra khỏi 200px*200px
+        và kết quả là thẻ có kích cỡ là 250px*250px
+        để khắc phục vấn đề này sử dụng thuộc tính box-sizing: border-box;
+
+        thuộc tính box-sizing: border-box đảm bảo việc chiều rộng và chiều cao của 1
+        thẻ không bị ảnh hưởng khi ta thêm padding và border cho thẻ đó
+
+    </pre>
+
+
+
+
+</body>
+</html>
