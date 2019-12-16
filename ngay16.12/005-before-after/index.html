@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #container {
+            padding: 20px;
+            background-color: orange;
+            border: 1px solid red;
+        }
+
+        #container::before {
+            content: "Phần nội dung thêm vào phía trước bên trong thẻ";
+            background-color: green;
+            height: 30px;
+            width: 100%;
+        }
+
+        #container::after {
+            content: "Phần nội dung thêm vào phía sau bên trong thẻ";
+            background-color: blueviolet;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <pre>
+        ::before thêm content vào bên trong phía trước 1 thẻ html và cho phép định dạng các thuộc tính css phần content đó
+        ::after thêm content vào bên trong phía sau 1 thẻ html và cho phép định dạng các thuộc tính css phần content đó
+    </pre>
+
+    <div id="container">
+        Demo về after và before trong CSS
+    </div>
+</body>
+</html>
