@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .wrap {
+            border: 1px solid red;
+        }
+        .wrap > .para {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        Selector ( bộ chọn trong css )
+        #id ví dụ : #idA,#idB
+        .class ví dụ : .classA, .classB
+        tagname ví dụ : p {} div {} a {}
+        selectorA selectB ví dụ : .classA .classB ( hiểu là chọn tất cả các thẻ
+        có classA nằm trong classB )
+        selectorAselectB ví dụ : .classA.classB ( chú ý là không có dấu cách thì được
+        hiểu là sẽ chọn tất cả các thẻ có đồng thời cả 2 classA và classB )
+        selectorA > selectorB ví dụ : .classA > .classB ( hiểu là chọn tất cả các thẻ
+        có classB nằm trực tiếp bên trong thẻ có classA )
+
+    </pre>
+
+    <p class="para">Thẻ p số 1</p>
+    <p class="para">Thẻ p số 2</p>
+    <p class="para">Thẻ p số 3</p>
+
+    <div class="wrap">
+        <p class="para">Thẻ p số 4</p>
+        <div class="child">
+            <p class="para">Thẻ p số 5</p>
+        </div>
+    </div>
+
+    <pre>
+        quan sát ví dụ bên trên thẻ p số 4 là con trực tiếp của div .wrap
+        còn thẻ p số 5 mặc dù nằm trong thẻ .wrap nhưng không phải là con trực tiếp
+        bây giờ ta chỉ muốn style thẻ là con trực tiếp của .wrap
+        => .wrap > .para
+    </pre>
+
+
+
+</body>
+</html>
