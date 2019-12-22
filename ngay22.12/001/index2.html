@@ -8,11 +8,11 @@
             width: 200px;
             height: 200px;
             background-color: green;
-            border-radius: 20px;
-            /* safari + opera */
-            -webkit-border-radius: 20px;
+            border-radius: 20px 10px 4px 2px;
+            /* safari + opera + chrome */
+            -webkit-border-radius: 20px 10px 4px 2px;
             /* firefox */
-            -moz-border-radius: 20px;
+            -moz-border-radius: 20px 10px 4px 2px;
             text-align: center;
         }
 
@@ -35,6 +35,17 @@
     <pre>
         border-radius
         https://www.w3schools.com/css/css3_borders.asp
+        => bo tròn 4 góc khác nhau
+        border-radius: 20px 10px 4px 2px;
+        border-radius: X1 X2 X3 X4;
+        X1 là góc trên cùng tay trái
+        X2 là góc trên cùng tay phải
+        X3 là góc dưới cùng tay phải
+        X4 là góc dưới cùng tay trái
+
+        => bo tròn 1 góc giống nhau
+        border-radius : 20px;
+
     </pre>
 
     <div id="box1">
